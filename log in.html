@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>login</title>
+    <style>
+      .ss{
+          width: 500px;
+          height: 500px;
+          background-repeat: no-repeat;
+          background-size: contain;
+                      margin-top: 200px;
+          
+
+        background-image: url("back.jpg");
+        }
+        h5{
+            font-size: 20px;
+            color: white;
+            
+        }
+        input{
+            padding: 5px;
+        }
+        h2{
+            color: white;
+        }
+        .qq:hover{
+            background-color: aquamarine;
+        }
+        #aa{
+            margin-top: 40px;
+          
+        }
+        body{
+            background-image: url("nn.png");
+         
+            margin-left:600px;
+           
+            
+        }
+    </style>
+    
+</head>
+    <body><center>
+  <div class="ss">
+   <h2>Log In</h2>
+    <form id="aa">
+    <h5>User name
+        <input type="text" placeholder="Username" id="text1" /><br /></h5>
+    <h5>Password
+        <input type="password" placeholder="Password" id="text2" /><br /></h5>
+    <input class="qq" type="button" value="Login"  onclick="javascript:validate()" />
+    <button class="qq" style="padding: 5px;">reset</button><br>
+    <a href="signup.html"><h5 style="color: white;">Create a new accound?</h5></a>
+</form>
+        </div>
+</center>
+<script type="text/javascript">
+function validate()
+{
+    if(   document.getElementById("text1").value == "sakthivel"
+       && document.getElementById("text2").value == "sakthivel" )
+    {
+        
+        location.href="index.html";
+    }
+    else
+    {
+        alert( "validation failed" );
+        location.href="log in.html";
+    }
+}
+</script>
+</body>
+</html>

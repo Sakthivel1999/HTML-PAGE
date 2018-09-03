@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-image: url("a.jpg");
+            background-size: cover;
+        }
+
+        input {
+           padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            background-color:transparent;
+             color: white;
+        }
+        input:hover{
+            background-color: black;
+       
+        }
+
+        .center {
+            background: white;
+            border: 3px solid black;
+            width: 800px;
+        }
+
+        .a {
+            width: 500px;
+            color: white;
+            padding: 20px;
+            
+            
+        }
+
+    </style>
+    <script>
+        function validateForm() {
+            var x = document.forms["myForm"]["fname"].value;
+            if (x == "") {
+                alert(" First Name must be filled out");
+                return false;
+            }
+            var x = document.forms["myForm"]["sname"].value;
+            if (x == "") {
+                alert(" Last Name must be filled out");
+                return false;
+            }
+            var x = document.forms["myForm"]["ename"].value;
+            if (x == "") {
+                alert("Email  must be filled out");
+                return false;
+            }
+            var x = document.forms["myForm"]["pname"].value;
+            if (x == "") {
+                alert("Phone number must be filled out");
+                return false;
+            }
+            var x = document.forms["myForm"]["dname"].value;
+            if (x == "") {
+                alert("Date must be filled out");
+                return false;
+
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <center>
+        <div class="a">
+            <form name="myForm" action="" onsubmit="return validateForm()" method="post">
+                <h2>Sign up</h2>
+                First Name: <input type="text" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" name="fname" /><br> Last Name: <input type="text" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" name="sname" /><br> Email id : <input type="text" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="Invalid email address" name="ename" /><br> Phone Number :<input type="text" pattern="[0-9]{10}" name="pname" /><br> birth date:<input type="date" name="dname"><br>
+                <input type="radio" name="gender" checked />Male
+                <br />
+                <input type="radio" name="gender" />Female<br>
+                <input type="radio" name="gender" />Other<br>
+
+                <input type="checkbox" name="cname">Accept all agreement....? <br>
+                <input style="padding-right:20px;" type="submit" value="Submit" />
+                <input style="padding-right:20px;" type="reset" value="Reset" />
+
+            </form>
+        </div>
+    </center>
+</body>
+
+</html>
